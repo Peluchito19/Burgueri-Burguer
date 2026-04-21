@@ -1,0 +1,7 @@
+{
+  "name": "buruberi-burger",
+  "private": true,
+  "scripts": {
+    "build": "node build-vercel-output.mjs"
+  }
+}
