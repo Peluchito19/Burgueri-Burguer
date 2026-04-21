@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buruberi Burger | Cartilla clasica</title>
+  <meta name="description" content="Version clasica de la cartilla digital de Buruberi Burger con carrito lateral y pedido por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <main class="experience-grid">
+      <section class="menu-stage fade-up" aria-labelledby="poster-title">
+        <div class="menu-stage__bar">
+          <div>
+            <p class="eyebrow">Cartilla digital interactiva</p>
+            <h1 id="poster-title">El afiche real, ahora con carrito</h1>
+          </div>
+
+          <a class="menu-stage__jump" href="#pedido">
+            Ver carrito
+            <span id="floating-count">0</span>
+          </a>
+        </div>
+
+        <p class="menu-stage__hint">
+          Toca los iconos + directamente sobre la cartilla para sumar cada producto sin perder el diseno original.
+        </p>
+
+        <div class="poster-shell" id="menu">
+          <div class="poster-board">
+            <img
+              class="poster-image"
+              src="public/images/18ab15c9-0f0d-48ad-a463-ac39b9246702.jpg"
+              alt="Cartilla Buruberi Burger con hamburguesas, papas fritas, combo familiar, horario y WhatsApp"
+            >
+            <div class="poster-hotspots" id="menu-hotspots" aria-label="Productos interactivos del afiche"></div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cart-panel fade-up fade-up--delayed" id="pedido">
+        <div class="cart-panel__header">
+          <p class="eyebrow">Carrito Buruberi</p>
+          <h2>Pedido listo para WhatsApp</h2>
+          <p>
+            El resumen se arma automaticamente con cantidades, subtotales y total final.
+          </p>
+        </div>
+
+        <div class="cart-meta">
+          <article class="cart-meta__item">
+            <span>Horario</span>
+            <strong>Lun a vie 12:00 - 20:00</strong>
+          </article>
+
+          <article class="cart-meta__item">
+            <span>WhatsApp</span>
+            <strong>+56 9 5451 9788</strong>
+          </article>
+        </div>
+
+        <p class="cart-status" id="cart-status" aria-live="polite">Aun no agregas productos.</p>
+
+        <div class="cart-items" id="cart-items"></div>
+
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Items</span>
+            <strong id="cart-count">0</strong>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <strong id="cart-total" aria-live="polite">$0</strong>
+          </div>
+        </div>
+
+        <p class="cart-note">
+          El mensaje incluye nombre, tipo de entrega y observaciones para que el cliente complete el pedido.
+        </p>
+
+        <div class="cart-actions">
+          <button class="ghost-button" id="clear-cart" type="button">Vaciar carrito</button>
+          <a class="whatsapp-button is-disabled" id="whatsapp-link" href="#" target="_blank" rel="noreferrer">
+            Enviar pedido por WhatsApp
+          </a>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
