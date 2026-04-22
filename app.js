@@ -142,21 +142,21 @@ function renderCart() {
       return `
         <article class="cart-item">
           <div class="cart-item__head">
-            <div>
+            <div class="cart-item__details">
               <p class="cart-item__name">${entry.name}</p>
               <span class="cart-item__meta">${formatCurrency(entry.price)} por unidad</span>
             </div>
 
             <div class="cart-item__controls" aria-label="Controles de cantidad para ${entry.name}">
               <button class="qty-button" type="button" data-qty-action="decrease" data-item-id="${entry.id}" aria-label="Quitar una unidad de ${entry.name}">-</button>
-              <strong>${entry.quantity}</strong>
+              <strong class="cart-item__quantity">${entry.quantity}</strong>
               <button class="qty-button" type="button" data-qty-action="increase" data-item-id="${entry.id}" aria-label="Agregar una unidad de ${entry.name}">+</button>
             </div>
           </div>
 
           <div class="cart-item__foot">
             <span class="cart-item__subtotal">Subtotal</span>
-            <strong>${formatCurrency(entry.price * entry.quantity)}</strong>
+            <strong class="cart-item__subtotal-value">${formatCurrency(entry.price * entry.quantity)}</strong>
           </div>
         </article>
       `;
